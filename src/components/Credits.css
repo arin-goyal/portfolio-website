@@ -39,17 +39,17 @@
 
 /* Easter Egg Styling */
 .credits-easter-egg {
-  width: 40px; /* Adjust size as needed for a square look */
-  height: 40px;
+  width: 28px; /* Adjust size as needed for a square look */
+  height: 28px;
   object-fit: cover;
-  opacity: 0.6; /* Subtle look, can increase on hover */
+  opacity: 0.8; /* Subtle look, can increase on hover */
   transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: help; /* Clue that it's an easter egg */
 }
 
 .credits-easter-egg:hover {
   opacity: 1;
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.07) rotate(3deg);
 }
 
 /* Responsive adjustment for 108px margin */

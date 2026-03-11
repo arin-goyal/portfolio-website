@@ -14,10 +14,10 @@ const Credits = () => {
         </span>
       </p>
 
-      {/* Right side: Easter Egg PNG */}
+      {/* Right side: Easter Egg SVG */}
       <img 
-        src="/Easter-egg.png" 
-        alt="Easter Egg" 
+        src="/Easter-Egg.svg" 
+        alt='For someone who was once my best friend and also the reason this site exists. "A small piece from the trip I wish I had taken."' 
         className="credits-easter-egg" 
       />
     </div>
