@@ -1,0 +1,136 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Forces the section to be at least the full height of the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+  align-items: center;     /* Centers content horizontally */
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the whole block */
+  margin-top: 0;   /* Adjust based on your carousel position */
+  width: 100%;
+}
+
+.hero-main-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 475px; /* Limits width so the left/right offset is visible */
+  gap: 0px;        /* Space between the three text lines */
+}
+
+.hero-greeting {
+  font-family: var(--font-heading);
+  font-size: 100px;
+  align-self: flex-start; /* Aligns "Hello" to the left */
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.hero-name {
+  font-family: var(--font-body);
+  font-size: 60px;
+  font-weight: 100;
+  align-self: flex-end; /* Aligns "I'm Arin Goyal" to the right */
+  color: var(--text-color);
+  margin-top: -10px;
+  margin-bottom: -30px;
+  text-shadow: 0 2px 5.3px rgba(8, 11, 10, 0.43);
+}
+
+.hero-subtext {
+  font-family: var(--font-body);
+  font-size: 50px;
+  text-align: center; /* Centers the welcome line */
+  opacity: 0.7;
+  color: var(--text-color);
+}
+
+.name-container {
+  position: relative;
+  align-self: flex-end; /* Keeps the name to the right */
+  display: inline-block;
+}
+
+.name-vector {
+  position: absolute;
+  bottom: -30px; /* Positions it right under the letters */
+  right: -43px;
+  width: 100%;  /* Makes the underline span the name */
+  z-index: -1;  /* Put it behind the text for a cool layered look */
+  opacity: 0.8;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.figma-btn {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color); /* Your Figma 1px border */
+  background-color: transparent;
+  border-radius: 100px; /* Adjust if your Figma design is rounded */
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.figma-btn:hover {
+  background-color: var(--primary-color); /* Fills the frame */
+  color: var(--bg-color); /* Changes logo color (via currentColor) */
+}
+
+.btn-logo {
+  height: 16px; /* Your Figma spec */
+  width: auto;
+  transition: fill 0.3s ease;
+}
+
+.floating-img {
+  position: absolute;
+  pointer-events: none; /* User can click through the image to the buttons */
+  width: 244px;  /* Adjust size based on your PNGs */
+  height: auto;
+  z-index: 5;   /* Sits above the background but below the cursor if needed */
+}
+
+/* Position the first image to the left of the buttons */
+.floating-img.left {
+  right: 100%; 
+  margin-right: 10px; /* Fixed gap from the left button */
+  top: 25px;
+}
+
+/* Position the second image to the right of the buttons */
+.floating-img.right {
+  left: 100%;
+  margin-left: 10px; /* Fixed gap from the right button */
+  bottom: -55px;
+}
+
+.hero-buttons-container {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* CRITICAL: This makes the 'center' of this container the center of your buttons */
+  width: fit-content; 
+  margin: 40px auto 0 auto; /* Centers the container itself */
+  gap: 24px; /* Space between buttons */
+}

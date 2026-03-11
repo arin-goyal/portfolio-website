@@ -1,0 +1,122 @@
+.projects-container {
+  width: 100%;
+  padding: 0px 108px; /* Your 108px horizontal margin */
+  box-sizing: border-box;
+}
+
+.projects-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the title and button */
+}
+
+/* Title Styling */
+.projects-header {
+  margin-bottom: 32px;
+}
+
+.projects-title-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.projects-underline {
+  position: absolute;
+  bottom: -4px;
+  z-index: -1;
+  left: 0;
+  width: 100%; /* Matches title length automatically */
+}
+
+.projects-title {
+  font-family: var(--font-headingBold);
+  font-size: 40px;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Grid Styling */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 32px; /* 32px gap between boxes */
+  width: 100%;
+}
+
+.project-box {
+  width: 100%;
+  aspect-ratio: 5 / 3; /* Maintains 5:3 ratio dynamically */
+  background-color: rgba(255, 255, 255, 0.05); /* Placeholder color */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  border-color: #91D0BF;
+}
+
+/* Footer & Button Styling */
+.projects-footer {
+  margin-top: 32px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.show-more-btn {
+  display: flex;
+  align-items: center;
+  
+  /* Initial State */
+  gap: 12px;
+  padding: 0px 0px; 
+  
+  /* Fixed Width Logic */
+  height: 52px;
+  width: 180px; /* Setting a fixed width ensures the button never grows */
+  justify-content: center; /* Keeps everything centered inside the fixed width */
+  
+  background: transparent;
+  color: var(--text-color);
+  border: 1.9px solid var(--text-color);
+  font-family: var(--font-body);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 100px;
+  
+  /* Transition for both the gap and the colors */
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  text-decoration: none;
+}
+
+/* Arrow specific styling */
+.btn-arrow {
+  transition: transform 0.3s ease; /* Makes the rotation smooth */
+}
+
+/* Hover States */
+.show-more-btn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  font-size: 19px;
+  padding: 2px 2px; 
+  /* Increase the gap */
+  gap: 18px;
+}
+
+.show-more-btn:hover .btn-arrow {
+  /* Rotates 45 degrees when the button is hovered */
+  transform: rotate(45deg);
+}
+/* Partition Line */
+.projects-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #DBF0EA;
+  margin-top: -32px;
+  margin-bottom: 32px;
+  opacity: 0.2;
+}

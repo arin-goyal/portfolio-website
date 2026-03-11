@@ -1,0 +1,141 @@
+.thank-you-container {
+  width: 100%;
+  padding: 0px 108px;
+  gap: 32px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.thank-you-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.thank-you-title-wrapper {
+  margin-top: 64px;
+  position: relative;
+  width: fit-content;
+}
+
+.thank-you-title {
+  font-family: var(--font-headingBold);
+  font-size: 80px;
+  color: var(--text-color);
+  text-shadow: 0 2px 5.3px rgba(8, 11, 10, 0.43);
+  margin: 0;
+}
+
+.thank-you-underline {
+  position: absolute;
+  bottom: 5px;
+  z-index: -1;
+  left: 0;
+  width: 100%; /* Matches title length automatically */
+}
+
+.contact-label {
+  font-family: var(--font-body);
+  font-size: 28px;
+  color: #DBF0EA;
+  margin-bottom: 32px;
+  opacity: 0.9;
+}
+
+/* Flexbox Bar */
+.contact-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Email Pill */
+.email-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #192320;
+  border-radius: 100px;
+  color: #7AA89A; /* Matching your vector color */
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-size: 20px;
+  transition: background 0.5s ease;
+}
+.email-button-text {
+  font-size: 20px;
+}
+
+.email-button:hover {
+  background: #13251f;
+}
+
+/* Socials on the Right */
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-pill {
+  padding: 16px 32px;
+  border: 2px solid #DBF0EA;
+  border-radius: 100px;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.social-circle-linkedin,  .social-circle-behance, .social-circle-instagram{
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: var(--text-color);
+}
+
+.social-pill:hover {
+  background-color: #DBF0EA;
+  border-color: #91D0BF;
+  color: #91D0BF;
+  color: var(--bg-color);
+}
+
+.social-circle-linkedin:hover{
+    border-color: transparent;
+    background-color: #0A66C2;
+    color: #ffffff;
+}
+.social-circle-behance:hover{
+    border-color: transparent;
+    background-color: #DBF0EA;
+    color: #192320;
+}
+.social-circle-instagram:hover{
+    border-color: transparent;
+    color: #ffffff;
+    /* Path to your image */
+    background-image: url('/insta-gradient.png'); 
+    /* Ensures the image fills the circle perfectly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.projects-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #DBF0EA;
+  margin-top: 96px;
+  margin-bottom: 0px;
+  opacity: 0.2;
+}

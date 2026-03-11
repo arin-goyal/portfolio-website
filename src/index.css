@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+/* First Font (e.g., for Headings) */
+@font-face {
+  font-family: 'MyHeadingFontBlack';
+  src: url('./assets/fonts/HarrietDisplay-BlackItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyHeadingFontBold';
+  src: url('./assets/fonts/HarrietDisplay-BoldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Second Font (e.g., for Body Text) */
+@font-face {
+  font-family: 'MyBodyFont';
+  src: url('./assets/fonts/SFPRODISPLAYMEDIUM.OTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MyBodyFontBold';
+  src: url('./assets/fonts/SFPRODISPLAYBOLD.OTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* This ensures the color fills the entire screen height */
+  margin: 0;
+  padding: 0;
+
+  --primary-color: #DBF0EA;
+  --secondary-color: #74817D;
+  --bg-color: #080B0A;
+  --text-color: #DBF0EA;
+  --accent-color: #91D0BF;
+
+  --font-heading: 'MyHeadingFontBlack', sans-serif;
+  --font-headingBold: 'MyHeadingFontBold', sans-serif;
+  --font-body: 'MyBodyFont', system-ui, sans-serif;
+  --font-bodybold: 'MyBodyFontBold', system-ui, sans-serif;
+  --font-accent: 'Finger Paint', cursive;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color); /* <--- Change this to your preferred color */
+  color: var(--text-color);              /* This sets the default text color */
+  min-height: 100vh;         /* Ensures the background covers the full screen */
+  font-family: Arial, sans-serif;
+}

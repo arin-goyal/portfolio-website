@@ -1,0 +1,44 @@
+.hero-bg-container {
+  position: absolute; /* Sits behind the main content */
+  top: 144px;         /* Starts after your navbar height */
+  left: 0;
+  width: 100vw;
+  height: 516px;
+  overflow: hidden;   /* Hides the images that are off-screen */
+  z-index: 1;        /* Ensures it stays behind your text */
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 25%,     /* Becomes fully visible 15% in from the left */
+    black 75%,     /* Stays fully visible until 15% from the right */
+    transparent 100%);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 64px;          /* The 64px space you requested */
+  width: max-content; /* Ensures the track is as wide as all images combined */
+  will-change: transform;
+  animation: scroll 20s linear infinite; /* Adjust '40s' for speed */
+  flex-wrap: nowrap;
+}
+
+.carousel-img {
+  flex-shrink: 0;
+  display: block;
+  object-fit: cover;
+  filter: blur(2px);
+  opacity: 0.1;
+}
+
+/* The Animation Logic */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves the track exactly half its length */
+    transform: translateX(calc(-50% - 32px)); 
+  }
+}

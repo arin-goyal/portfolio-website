@@ -1,0 +1,40 @@
+.toggle-wrapper {
+  display: inline-flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 41px;
+  background: #2E3533;
+}
+
+/* The sliding circle/pill */
+.toggle-slider {
+  width: 30px;
+  height: 30px;
+  aspect-ratio: 1/1;
+  position: absolute;
+  border-radius: 35px;
+  background: #141414;
+  box-shadow: 0 0 1.719px 0.704px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Position adjustments for the slider */
+.is-left {
+  transform: translateX(-17px);
+}
+
+.is-right {
+  transform: translateX(17px);
+}
+
+.toggle-icon {
+  position: relative;
+  z-index: 2; /* Keeps icons above the slider */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
