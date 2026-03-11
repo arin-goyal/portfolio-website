@@ -1,8 +1,13 @@
 .credits-container {
   width: 100%;
-  padding: 16px 108px; /* Restoring some vertical padding for breathing room */
+  padding: 16px 108px;
   background-color: transparent;
   box-sizing: border-box;
+  
+  /* Flexbox settings for automatic gap */
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
 }
 
 .credits-text {
@@ -12,7 +17,6 @@
   margin: 0;
 }
 
-/* New Wrapper to anchor the SVG */
 .name-wrapper {
   position: relative;
   display: inline-block;
@@ -27,9 +31,30 @@
 
 .credits-underline {
   position: absolute;
-  /* Positions the SVG directly under the text */
   bottom: -3px; 
-  left: 3px;   /* Matches the margin-left of the name */
-  width: 100%; /* Makes the SVG stretch to match name width */
+  left: 3px;   
+  width: 100%; 
   height: auto;
+}
+
+/* Easter Egg Styling */
+.credits-easter-egg {
+  width: 40px; /* Adjust size as needed for a square look */
+  height: 40px;
+  object-fit: cover;
+  opacity: 0.6; /* Subtle look, can increase on hover */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: help; /* Clue that it's an easter egg */
+}
+
+.credits-easter-egg:hover {
+  opacity: 1;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Responsive adjustment for 108px margin */
+@media (max-width: 768px) {
+  .credits-container {
+    padding: 16px 24px;
+  }
 }

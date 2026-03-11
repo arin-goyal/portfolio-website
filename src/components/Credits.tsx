@@ -3,6 +3,7 @@ import './Credits.css';
 const Credits = () => {
   return (
     <div className="credits-container">
+      {/* Left side: Text */}
       <p className="credits-text">
         Created by{' '}
         <span className="name-wrapper">
@@ -12,6 +13,13 @@ const Credits = () => {
           </svg>
         </span>
       </p>
+
+      {/* Right side: Easter Egg PNG */}
+      <img 
+        src="/Easter-egg.png" 
+        alt="Easter Egg" 
+        className="credits-easter-egg" 
+      />
     </div>
   );
 };
