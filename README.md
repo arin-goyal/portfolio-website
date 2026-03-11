@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website! This project showcases my work as a **third-year AI and Robotics engineering student** with a strong focus on **UI/UX Design** and **MLOps**.
 
 ## 🚀 Live Demo
-You can view the live site here: **[Insert Your Netlify URL Here]**
+You can view the live site here: **[(https://arin-goyal.netlify.app/)]**
 
 ## 🛠️ Tech Stack
 - **Frontend:** React + TypeScript
