@@ -15,6 +15,9 @@ const ThankYou = () => {
           </div>
         </div>
 
+        <section className='get-in-touch-container'>
+          
+        </section>
         <p className="contact-label">Get in touch:</p>
 
         {/* Contact Bar */}
