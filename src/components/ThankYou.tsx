@@ -23,7 +23,7 @@ const ThankYou = () => {
         {/* Contact Bar */}
         <div className="contact-bar">
           {/* Left: Email Button */}
-          <a href="mailto:aringoyalper@gmail.com" className="email-button">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aringoyalper@gmail.com" target="_blank" rel="noopener noreferrer" className="email-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none">
               <path d="M1.00024 4.75L9.41524 8.616C9.67716 8.73634 9.962 8.79865 10.2502 8.79865C10.5385 8.79865 10.8233 8.73634 11.0852 8.616L19.5002 4.75M4.00024 1H16.5002C18.1571 1 19.5002 2.34315 19.5002 4V13.5C19.5002 15.1569 18.1571 16.5 16.5002 16.5H4.00024C2.34339 16.5 1.00024 15.1569 1.00024 13.5V4C1.00024 2.34315 2.34339 1 4.00024 1Z" stroke="#7AA89A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
