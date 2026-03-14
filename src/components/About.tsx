@@ -1,6 +1,28 @@
+import React from "react";
 import './About.css';
 
-const About = () => {
+const About: React.FC = () => {
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLImageElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const moveX = (x - centerX) / 10;
+    const moveY = (y - centerY) / 10;
+
+    e.currentTarget.style.transform =
+      `rotate(2deg) scale(1.08) translate(${moveX}px, ${moveY}px)`;
+  };
+
+  const handleMouseLeave = (e: React.MouseEvent<HTMLImageElement>) => {
+    e.currentTarget.style.transform = "rotate(0.8deg) scale(1.03)";
+  };
+
   return (
     <section className="about-container" id="about">
       <div className="about-content">
@@ -25,7 +47,13 @@ const About = () => {
 
         {/* Right Side: Photo */}
         <div className="about-image-wrapper">
-          <img src="/profile-me.png" alt="Arin Goyal" className="about-photo" />
+          <img 
+            src="/profile-me.png" 
+            alt="Arin Goyal" 
+            className="about-photo" 
+            onMouseMove={handleMouseMove}
+            onMouseLeave={handleMouseLeave}
+          />
         </div>
 
       </div>
