@@ -50,6 +50,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 1002;
 }
 
 /* LEFT SIDE */
@@ -168,24 +170,39 @@
     top: 0;
     right: -100%;
 
-    width: 70%;
+    width: 100%;        /* FULL WIDTH */
     height: 100vh;
 
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* center links horizontally */
+
     gap: 40px;
 
     background: rgba(8,11,10,0.98);
     backdrop-filter: blur(20px);
 
     transition: right 0.4s ease;
+
+    z-index: 1001;
   }
 
   .nav-links.open {
     right: 0;
   }
 
+  .nav-item {
+    font-size: 24px;
+  }
+
   .hamburger {
     display: flex;
+  }
+
+  .navbar-left,
+  .nav-controls {
+    position: relative;
+    z-index: 1003;
   }
 }
