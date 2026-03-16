@@ -66,7 +66,7 @@
   right: -43px;
   width: 100%;  /* Makes the underline span the name */
   z-index: -1;  /* Put it behind the text for a cool layered look */
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .hero-buttons {
