@@ -3,22 +3,42 @@
 Welcome to my personal portfolio website! This project showcases my work as a **third-year AI and Robotics engineering student** with a strong focus on **UI/UX Design** and **AI/ML**.
 
 ## 🚀 Live Demo
-You can view the live site here: **https://arin-goyal.netlify.app/**
+You can view the live site here: **[https://arin-goyal.netlify.app/](https://arin-goyal.netlify.app/)**
 
 ## 🛠️ Tech Stack
 - **Frontend:** React + TypeScript
 - **Bundler:** Vite
-- **Styling:** CSS (Custom Properties & Media Queries)
+- **Styling:** Custom CSS (Modular with Custom Properties & Media Queries)
 - **Deployment:** Netlify
 
-## ✨ Key Features
-- **Responsive Design:** Optimized for mobile, tablet, and desktop viewing.
-- **Custom Branding:** Hand-drawn vector underlines and signature mint (#91D0BF) accents.
-- **Project Showcase:** A dynamic 2x2 grid highlighting my latest work.
-
 ## 📂 Project Structure
-- `/src/components`: Modular React components (Hero, About, Projects, ThankYou).
-- `/public`: Static assets and PNG elements.
+- `/src/components`: Component-based React architecture featuring sections like Hero, About, Projects, Navigation, ThankYou, and Credits.
+- `/src/assets`: Static resources.
+- `/public`: Static images, profile pictures, and downloadable documents.
+
+## 💻 Running Locally
+
+If you'd like to run the website on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/arin-goyal/portfolio-website.git
+   ```
+
+2. **Navigate to the directory:**
+   ```bash
+   cd portfolio-website
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
 ---
-*Created by Arin Goyal*
+*Designed and Developed by Arin Goyal*
