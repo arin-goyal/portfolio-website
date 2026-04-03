@@ -103,7 +103,7 @@
 }
 
 .hamburger__bar:nth-child(3) {
-  top: calc(50% + 7px);
+  top: calc(50% + 5px);
   transform: translateX(-50%);
 }
 
@@ -173,7 +173,7 @@
 
 @media (max-width: 767px) {
   .navbar-container {
-    width: 94%;
+    width: 90%;
     height: 80px;
     padding: 0 24px;
     top: 24px;
