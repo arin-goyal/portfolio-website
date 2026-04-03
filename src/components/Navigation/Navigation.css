@@ -9,28 +9,15 @@
   align-items: center;
   padding: 0 108px;
   box-sizing: border-box;
-  background: transparent;
+  background-color: rgba(8, 11, 10, 0.6);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background-color 0.3s ease;
 }
 
-.navbar-container::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  backdrop-filter: blur(18px) saturate(120%);
-  -webkit-backdrop-filter: blur(18px) saturate(120%);
-  mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
-  transform: translateZ(0);
-  will-change: backdrop-filter;
-  background: linear-gradient(to bottom, var(--nav-bar-tint-top), transparent);
-  transition: background 0.28s ease, mask-image 0.28s ease, -webkit-mask-image 0.28s ease;
-}
-
-.navbar-container--menu-open::before {
-  mask-image: none;
-  -webkit-mask-image: none;
-  background: var(--nav-overlay-tint);
+.navbar-container--menu-open {
+  background-color: rgba(8, 11, 10, 0.85);
 }
 
 .navbar-inner {
@@ -141,9 +128,9 @@
   align-items: center;
   justify-content: center;
   padding: 24px;
-  background: var(--nav-overlay-tint);
-  backdrop-filter: blur(18px) saturate(120%);
-  -webkit-backdrop-filter: blur(18px) saturate(120%);
+  background-color: rgba(8, 11, 10, 0.7);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
