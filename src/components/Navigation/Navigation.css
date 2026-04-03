@@ -17,8 +17,8 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  backdrop-filter: blur(var(--nav-backdrop-blur)) saturate(var(--nav-backdrop-saturate));
-  -webkit-backdrop-filter: blur(var(--nav-backdrop-blur)) saturate(var(--nav-backdrop-saturate));
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
   mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   -webkit-mask-image: linear-gradient(to bottom, black 0%, black 50%, transparent 100%);
   transform: translateZ(0);
@@ -142,8 +142,8 @@
   justify-content: center;
   padding: 24px;
   background: var(--nav-overlay-tint);
-  backdrop-filter: blur(var(--nav-backdrop-blur)) saturate(var(--nav-backdrop-saturate));
-  -webkit-backdrop-filter: blur(var(--nav-backdrop-blur)) saturate(var(--nav-backdrop-saturate));
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
