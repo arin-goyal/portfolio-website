@@ -51,11 +51,11 @@ export default function Navigation() {
             <img
               src="/profile.png"
               alt="Profile"
-              className="h-12 w-12 md:h-16 md:w-16 rounded-full object-cover"
+              className="h-12 w-12 md:h-10 md:w-10 rounded-full object-cover"
             />
             <div className="flex flex-col items-start gap-0.5 md:gap-2">
-              <p className="text-[18px] md:text-[24px] font-bold leading-none text-[#DBF0EA]">Arin</p>
-              <p className="text-[14px] md:text-[18px] font-regular leading-none text-[#DBF0EA] opacity-80">UI/UX Designer</p>
+              <p className="text-[14px] md:text-[22px] font-bold leading-none text-[#DBF0EA]">Arin.</p>
+              <p className="text-[14px] md:text-[12px] font-regular leading-none text-[#DBF0EA] opacity-80">UI/UX Designer</p>
             </div>
           </div>
 
