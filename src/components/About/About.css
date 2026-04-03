@@ -1,0 +1,127 @@
+.about-container {
+  width: 100%;
+  padding: 98px 108px 0 108px;
+  box-sizing: border-box;
+  background-color: #080B0A;
+}
+
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+  width: 100%;
+}
+
+/* LEFT SIDE STYLES */
+.about-text-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.about-title-container {
+  position: relative;
+  width: fit-content;
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 40px;
+  color: #DBF0EA;
+  margin: 0;
+}
+
+.title-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+}
+
+.about-paragraph {
+  font-family: var(--font-sans);
+  text-align: justify;
+  font-size: 26px;
+  line-height: 1.4;
+  color: #74817D;
+  margin: 0;
+}
+
+/* RIGHT SIDE STYLES */
+.about-image-wrapper {
+  flex-shrink: 0;
+}
+
+.about-photo {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.34, 3.0, 0.64, 0.8)
+}
+
+.about-photo:hover {
+  transform: rotate(0.8deg) scale(1.03);
+}
+
+/* BOTTOM LINE */
+.about-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #DBF0EA;
+  margin-top: 64px;
+  margin-bottom: 32px;
+  opacity: 0.2;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 767px) {
+  .about-container {
+    padding: 64px 32px 0 32px;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: stretch;
+    /* allows paragraphs to be full width */
+    gap: 32px;
+    /* uniform gap for the unraveled children */
+  }
+
+  .about-text-wrapper {
+    display: contents;
+    /* unleashes the title and paragraphs to be direct flex children of about-content */
+  }
+
+  .about-title-container {
+    order: 1;
+    align-self: flex-start;
+  }
+
+  .about-image-wrapper {
+    order: 2;
+    /* places the image directly beneath the title */
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-paragraph {
+    order: 3;
+    /* places the text exactly under the image */
+    font-size: 14px;
+  }
+
+  .about-title {
+    font-size: 28px;
+  }
+}

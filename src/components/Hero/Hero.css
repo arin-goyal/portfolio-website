@@ -1,0 +1,216 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  padding-top: 144px;
+}
+
+.hero-carousel {
+  width: 100%;
+}
+
+.hero-carousel__viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000 14%,
+    #000 86%,
+    transparent 100%
+  );
+}
+
+.hero-carousel__track {
+  display: flex;
+  width: max-content;
+  gap: 64px;
+  animation: hero-carousel-scroll 20s linear infinite;
+}
+
+.hero-carousel__img {
+  display: block;
+  height: 516px;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.13;
+  filter: blur(7px);
+}
+
+.hero-content {
+  position: absolute;
+  top: calc(50% + 72px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-main-text {
+  position: relative;
+  width: 475px;
+  height: 168px;
+}
+
+.hero-hello {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 900;
+  font-size: 100px;
+  color: #91d0bf;
+  line-height: 1;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-name-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.hero-name {
+  position: relative;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 60px;
+  color: #dbf0ea;
+  line-height: 1;
+  z-index: 2;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+
+.hero-stroke {
+  position: absolute;
+  bottom: -7px;
+  left: 87px;
+  width: 75%;
+  z-index: 1;
+}
+
+@keyframes hero-carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel__track {
+    animation: none;
+  }
+}
+
+.hero-buttons-container {
+  --primary-color: #DBF0EA;
+  --bg-color: #070707;
+  pointer-events: auto;
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content; 
+  margin: 64px auto 0 auto;
+  gap: 24px;
+}
+
+.figma-btn {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  border-radius: 100px;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.figma-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}
+
+.btn-logo {
+  height: 16px;
+  width: auto;
+  transition: fill 0.3s ease;
+}
+
+.floating-img {
+  position: absolute;
+  pointer-events: none;
+  width: 244px;
+  height: auto;
+  z-index: 5;
+}
+
+.mobile-float {
+  display: none;
+}
+
+.floating-img.left {
+  right: 100%; 
+  margin-right: 10px;
+  top: 25px;
+}
+
+.floating-img.right {
+  left: 100%;
+  margin-left: 10px;
+  bottom: -55px;
+}
+
+@media (max-width: 767px) {
+  .hero-buttons-container {
+    flex-direction: column;
+  }
+  
+  .floating-img.desktop-float {
+    display: none; 
+  }
+
+  .floating-img.mobile-float {
+    display: block;
+    width: 100px;
+  }
+
+  .floating-img.mobile-float.left {
+    right: 100%;
+    margin-right: 10px;
+    top: -50px;
+  }
+
+  .floating-img.mobile-float.right {
+    left: 100%;
+    margin-left: 8px;
+    bottom: -40px;
+  }
+
+  .hero-main-text {
+    width: 300px;
+    height: 104px;
+  }
+  .hero-hello {
+    font-size: 60px;
+  }
+  .hero-name {
+    font-size: 36px;
+  }
+  .hero-stroke {
+    left: 52px;
+    bottom: -4px;
+  }
+}

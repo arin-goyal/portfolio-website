@@ -1,0 +1,232 @@
+.thank-you-container {
+  width: 100%;
+  padding: 0px 108px;
+  padding-bottom: 0px;
+  gap: 32px;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.thank-you-content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.thank-you-title-wrapper {
+  margin-top: 64px;
+  position: relative;
+  width: fit-content;
+}
+
+.thank-you-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 80px;
+  color: #DBF0EA;
+  text-shadow: 0 2px 5.3px rgba(8, 11, 10, 0.43);
+  margin: 0;
+}
+
+.thank-you-underline {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+}
+
+.get-in-touch-container {
+  margin-top: 32px;
+  width: 100%;
+}
+
+.contact-label {
+  font-family: var(--font-sans);
+  font-size: 28px;
+  color: #DBF0EA;
+  margin-bottom: 16px;
+  opacity: 0.9;
+}
+
+/* Flexbox Bar */
+.contact-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Email Pill */
+.email-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 32px;
+  background: #192320;
+  border-radius: 100px;
+  color: #7AA89A;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 20px;
+  transition: background 0.5s ease;
+}
+
+.email-button:hover {
+  background: #13251f;
+}
+
+/* Socials on the Right */
+.social-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-pill {
+  height: 56px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #DBF0EA;
+  border-radius: 100px;
+  color: #DBF0EA;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: var(--font-sans);
+  transition: all 0.3s ease;
+}
+
+.social-circle-linkedin, .social-circle-behance, .social-circle-instagram {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #DBF0EA;
+  border-radius: 50%;
+  color: #DBF0EA;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-pill:hover {
+  background-color: #DBF0EA;
+  border-color: #91D0BF;
+  color: #080B0A;
+}
+
+.social-circle-linkedin:hover {
+  border-color: transparent;
+  background-color: #0A66C2;
+  color: #ffffff;
+}
+
+.social-circle-behance:hover {
+  border-color: transparent;
+  background-color: #DBF0EA;
+  color: #192320;
+}
+
+.social-circle-instagram:hover {
+  border-color: transparent;
+  color: #ffffff;
+  background-image: url('/insta-gradient.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.thank-you-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #DBF0EA;
+  margin-top: 96px;
+  opacity: 0.2;
+}
+
+/* Mobile Constraints */
+@media (max-width: 767px) {
+  .thank-you-container {
+    padding: 32px 32px 0 32px;
+  }
+  
+  .thank-you-title-wrapper {
+    margin-top: 0;
+  }
+  
+  .thank-you-title {
+    font-size: 40px;
+  }
+  
+  .get-in-touch-container {
+    margin-top: 16px;
+  }
+  
+  .contact-label {
+    font-size: 16px;
+  }
+  
+  .contact-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+  
+  .email-button {
+    width: fit-content;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 12px;
+    gap: 6px; /* shrink gap between icon and text */
+  }
+
+  .email-button svg {
+    transform: scale(0.75); /* scale envelope vector to match */
+  }
+  
+  .social-group {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  
+  .social-pill {
+    display: none;
+  }
+  
+  .social-circle-linkedin, .social-circle-behance, .social-circle-instagram {
+    width: 36px;
+    height: 36px;
+    border-color: transparent;
+  }
+  
+  .social-circle-linkedin {
+    background-color: #0A66C2;
+    color: #ffffff;
+  }
+
+  .social-circle-behance {
+    background-color: #DBF0EA;
+    color: #192320;
+  }
+
+  .social-circle-instagram {
+    color: #ffffff;
+    background-image: url('/insta-gradient.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .social-circle-linkedin svg, .social-circle-behance svg, .social-circle-instagram svg {
+    transform: scale(0.65); /* Prevents SVG overflow on custom shrunk circles */
+  }
+  
+  .thank-you-divider {
+    margin-top: 64px;
+  }
+}

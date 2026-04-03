@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYMEDIUM.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Harriet Display";
+  src: url("/fonts/HarrietDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Harriet Display";
+  src: url("/fonts/HarrietDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Harriet Display";
+  src: url("/fonts/HarrietDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Harriet Display";
+  src: url("/fonts/HarrietDisplay-BlackItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Harriet Display";
+  src: url("/fonts/HarrietDisplay-BoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-sans: "SF Pro", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Harriet Display", Georgia, "Times New Roman", serif;
+  --nav-backdrop-blur: 18px;
+  --nav-backdrop-saturate: 120%;
+  --nav-overlay-tint: rgba(8, 11, 10, 0.55);
+  --nav-bar-tint-top: rgba(8, 11, 10, 0.45);
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
