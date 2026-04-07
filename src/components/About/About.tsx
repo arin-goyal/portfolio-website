@@ -40,7 +40,7 @@ const About: React.FC<AboutProps> = ({ isDevMode }) => {
               <svg className="title-underline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 10" fill="none" preserveAspectRatio="none">
                 <defs>
                   <pattern id="squiggle-about" width="14" height="10" patternUnits="userSpaceOnUse">
-                    <path d="M 0,5 Q 3.5,1 7,5 T 14,5" fill="none" stroke="#F14C4C" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M 0,5 Q 3.5,1 7,5 T 14,5" fill="none" stroke="#FFCC00" strokeWidth="2" strokeLinecap="round" />
                   </pattern>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#squiggle-about)" />
