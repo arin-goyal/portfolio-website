@@ -46,6 +46,7 @@
 .contact-label {
   font-family: var(--font-sans);
   font-size: 28px;
+  font-weight: 400;
   color: #DBF0EA;
   margin-bottom: 16px;
   opacity: 0.9;
@@ -80,6 +81,15 @@
   background: #13251f;
 }
 
+.email-button.dev {
+  background: #2B1B2D;
+  color: #BB86C0;
+}
+
+.email-button.dev:hover {
+  background: #1A0F1B;
+}
+
 /* Socials on the Right */
 .social-group {
   display: flex;
@@ -102,7 +112,9 @@
   transition: all 0.3s ease;
 }
 
-.social-circle-linkedin, .social-circle-behance, .social-circle-instagram {
+.social-circle-linkedin,
+.social-circle-behance,
+.social-circle-instagram {
   width: 56px;
   height: 56px;
   display: flex;
@@ -136,7 +148,7 @@
 .social-circle-instagram:hover {
   border-color: transparent;
   color: #ffffff;
-  background-image: url('/insta-gradient.png'); 
+  background-image: url('/insta-gradient.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -155,23 +167,27 @@
   .thank-you-container {
     padding: 32px 32px 0 32px;
   }
-  
+
   .thank-you-title-wrapper {
     margin-top: 0;
   }
-  
+
   .thank-you-title {
     font-size: 40px;
   }
-  
+
+  .thank-you-underline {
+    bottom: 6px;
+  }
+
   .get-in-touch-container {
     margin-top: 16px;
   }
-  
+
   .contact-label {
     font-size: 16px;
   }
-  
+
   .contact-bar {
     flex-direction: row;
     align-items: center;
@@ -179,34 +195,38 @@
     gap: 12px;
     flex-wrap: nowrap;
   }
-  
+
   .email-button {
     width: fit-content;
     height: 36px;
     padding: 0 12px;
     font-size: 12px;
-    gap: 6px; /* shrink gap between icon and text */
+    gap: 6px;
+    /* shrink gap between icon and text */
   }
 
   .email-button svg {
-    transform: scale(0.75); /* scale envelope vector to match */
+    transform: scale(0.75);
+    /* scale envelope vector to match */
   }
-  
+
   .social-group {
     flex-wrap: nowrap;
     gap: 8px;
   }
-  
+
   .social-pill {
     display: none;
   }
-  
-  .social-circle-linkedin, .social-circle-behance, .social-circle-instagram {
+
+  .social-circle-linkedin,
+  .social-circle-behance,
+  .social-circle-instagram {
     width: 36px;
     height: 36px;
     border-color: transparent;
   }
-  
+
   .social-circle-linkedin {
     background-color: #0A66C2;
     color: #ffffff;
@@ -219,17 +239,77 @@
 
   .social-circle-instagram {
     color: #ffffff;
-    background-image: url('/insta-gradient.png'); 
+    background-image: url('/insta-gradient.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }
 
-  .social-circle-linkedin svg, .social-circle-behance svg, .social-circle-instagram svg {
-    transform: scale(0.65); /* Prevents SVG overflow on custom shrunk circles */
+  .social-circle-linkedin svg,
+  .social-circle-behance svg,
+  .social-circle-instagram svg {
+    transform: scale(0.65);
+    /* Prevents SVG overflow on custom shrunk circles */
   }
-  
+
   .thank-you-divider {
     margin-top: 64px;
+  }
+}
+
+.social-pill.dev,
+.social-circle-linkedin.dev,
+.social-circle-behance.dev,
+.social-circle-instagram.dev {
+  color: #F8EAFA;
+  border-color: #F8EAFA;
+}
+
+.social-pill.dev:hover {
+  background-color: #F8EAFA;
+  border-color: #F8EAFA;
+  color: #080B0A;
+}
+
+.social-circle-linkedin.dev:hover {
+  border-color: transparent;
+  background-color: #0A66C2;
+  color: #ffffff;
+}
+
+.social-circle-behance.dev:hover {
+  border-color: transparent;
+  background-color: #F8EAFA;
+  color: #192320;
+}
+
+.social-circle-instagram.dev:hover {
+  border-color: transparent;
+  color: #ffffff;
+  background-image: url('/insta-gradient.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .social-circle-linkedin.dev,
+  .social-circle-behance.dev,
+  .social-circle-instagram.dev {
+    border-color: transparent;
+  }
+
+  .social-circle-behance.dev {
+    background-color: #F8EAFA;
+    color: #192320;
+  }
+
+  .social-circle-linkedin.dev {
+    background-color: #0A66C2;
+    color: #ffffff;
+  }
+
+  .social-circle-instagram.dev {
+    color: #ffffff;
   }
 }

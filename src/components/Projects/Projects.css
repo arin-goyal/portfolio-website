@@ -66,6 +66,11 @@
   border-color: #91D0BF;
 }
 
+.project-box.dev:nth-child(even):hover,
+.project-box.dev:nth-child(odd):hover {
+  border-color: #F14C4C;
+}
+
 .projects-footer {
   margin-top: 32px;
   width: 100%;
@@ -137,4 +142,14 @@
     width: 140px;
     font-size: 15px;
   }
+}
+
+.show-more-btn.dev {
+  color: #F8EAFA;
+  border-color: #F8EAFA;
+}
+
+.show-more-btn.dev:hover {
+  background-color: #F8EAFA;
+  color: #080B0A;
 }

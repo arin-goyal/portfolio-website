@@ -95,3 +95,9 @@ h5,
 h6 {
   font-family: var(--font-display);
 }
+
+.font-dev-heading {
+  font-family: Consolas, monospace !important;
+  font-weight: bold !important;
+  font-style: normal !important;
+}

@@ -1,8 +1,11 @@
-import { useState } from 'react'
 import './ModeToggle.css'
 
-export default function ModeToggle() {
-  const [isDevMode, setIsDevMode] = useState(false)
+type ModeToggleProps = {
+  isDevMode: boolean;
+  setIsDevMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function ModeToggle({ isDevMode, setIsDevMode }: ModeToggleProps) {
 
   const activeGreen = '#91D0BF'
   const inactiveWhite = '#DBF0EA'

@@ -214,3 +214,47 @@
     bottom: -4px;
   }
 }
+
+/* Dev Mode CSS classes so you can independently tweak positions! */
+.floating-img.left.dev {
+  /* Edit these for the left desktop element in dev mode */
+  width: 600px;
+  right: 100%; 
+  margin-right: -75px;
+  top: 50px;
+}
+
+.floating-img.right.dev {
+  /* Edit these for the right desktop element in dev mode */
+  width: 200px;
+  left: 100%;
+  margin-left: 10px;
+  bottom: -40px;
+}
+
+@media (max-width: 767px) {
+  .floating-img.mobile-float.left.dev {
+    /* Edit these for the left mobile element in dev mode */
+    width: 100px;
+    right: 100%;
+    margin-right: 6px;
+    top: -45px;
+  }
+
+  .floating-img.mobile-float.right.dev {
+    /* Edit these for the right mobile element in dev mode */
+    left: 100%;
+    margin-left: -3px;
+    bottom: -35px;
+  }
+}
+
+.figma-btn.dev {
+  color: #F8EAFA;
+  border-color: #F8EAFA;
+}
+
+.figma-btn.dev:hover {
+  background-color: #F8EAFA;
+  color: #080B0A;
+}

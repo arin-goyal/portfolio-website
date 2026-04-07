@@ -10,7 +10,12 @@ const navLinks: NavItem[] = [
   { label: 'Resume', href: '/Resume.pdf', target: '_blank' },
 ]
 
-export default function Navigation() {
+type NavigationProps = {
+  isDevMode: boolean;
+  setIsDevMode: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function Navigation({ isDevMode, setIsDevMode }: NavigationProps) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false)
 
   useEffect(() => {
@@ -49,13 +54,15 @@ export default function Navigation() {
         <nav className="navbar-inner">
           <div className="flex items-center gap-3 md:gap-4">
             <img
-              src="/profile.png"
+              src={isDevMode ? "/profile dev.png" : "/profile.png"}
               alt="Profile"
-              className="h-12 w-12 md:h-10 md:w-10 rounded-full object-cover"
+              className={`h-12 w-12 md:h-10 md:w-10 object-cover ${!isDevMode ? 'rounded-full' : ''}`}
             />
             <div className="flex flex-col items-start gap-2 md:gap-2">
-              <p className="text-[20px] md:text-[22px] font-bold leading-none text-[#DBF0EA]">Arin.</p>
-              <p className="text-[12px] md:text-[12px] font-regular leading-none text-[#DBF0EA] opacity-80">UI/UX Designer</p>
+              <p className={`text-[20px] md:text-[22px] font-bold leading-none ${isDevMode ? 'text-[#F8EAFA]' : 'text-[#DBF0EA]'}`}>Arin.</p>
+              <p className={`text-[12px] md:text-[15px] font-regular leading-none opacity-80 ${isDevMode ? 'font-dev-heading text-[#6A8A39]' : 'text-[#DBF0EA]'}`}>
+                {isDevMode ? "# AI/ML Engineer" : "UI/UX Designer"}
+              </p>
             </div>
           </div>
 
@@ -65,7 +72,7 @@ export default function Navigation() {
                 <li key={item.label}>
                   <a
                     href={item.href}
-                    className="nav-link text-[18px] font-medium text-[#DBF0EA]"
+                    className={`nav-link text-[18px] font-medium text-[#DBF0EA] ${isDevMode ? 'nav-link-dev' : ''}`}
                     {...(item.target ? { target: item.target, rel: 'noreferrer' as const } : {})}
                   >
                     {item.label}
@@ -73,7 +80,7 @@ export default function Navigation() {
                 </li>
               ))}
             </ul>
-            <ModeToggle />
+            <ModeToggle isDevMode={isDevMode} setIsDevMode={setIsDevMode} />
             <button
               type="button"
               className={`hamburger ${mobileNavOpen ? 'hamburger--open' : ''}`}
@@ -104,7 +111,7 @@ export default function Navigation() {
             <a
               key={item.label}
               href={item.href}
-              className="mobile-nav-link"
+              className={`mobile-nav-link ${isDevMode ? 'mobile-nav-link-dev' : ''}`}
               {...(item.target ? { target: item.target, rel: 'noreferrer' as const } : {})}
               onClick={() => setMobileNavOpen(false)}
             >
