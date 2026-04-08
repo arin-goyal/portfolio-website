@@ -7,7 +7,7 @@ import ThankYou from './components/ThankYou/ThankYou'
 import Credits from './components/Credits/Credits'
 
 function App() {
-  const [isDevMode, setIsDevMode] = useState(true)
+  const [isDevMode, setIsDevMode] = useState(false)
 
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#080B0A] text-white">

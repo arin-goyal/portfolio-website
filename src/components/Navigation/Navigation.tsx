@@ -7,7 +7,7 @@ type NavItem = { label: string; href: string; target?: '_blank' }
 const navLinks: NavItem[] = [
   { label: 'About Me', href: '#about' },
   { label: 'Projects', href: '#work' },
-  { label: 'Resume', href: '/Resume.pdf', target: '_blank' },
+  { label: 'Resume', href: "/Resume_AI_april_26.pdf", target: '_blank' },
 ]
 
 type NavigationProps = {
